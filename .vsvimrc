@@ -1,0 +1,62 @@
+let mapleader=" "
+let g:EasyMotion_leader_key='<leader>'
+
+" Options
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set clipboard=unnamed
+set relativenumber
+set hlsearch
+set incsearch
+set expandtab
+set shiftwidth=4
+set tabstop=4
+set ai
+
+" Core
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+inoremap jk <ESC>
+
+nnoremap <leader>nh :noh<cr>
+
+nnoremap gd :vsc Edit.GoToDefinition<CR>
+nnoremap gl :vsc Edit.QuickInfo<CR>
+
+" No Copy
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>d "_d
+nnoremap <leader>c "_c
+
+vnoremap <leader>d "_d
+vnoremap <leader>c "_c
+
+" Tab Navigation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <S-l> :vsc Window.NextTab<CR>
+nnoremap <S-h> :vsc Window.PreviousTab<CR>
+
+" Window Split Control
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>sj :vsc Window.NewHorizontalTabGroup<CR>
+nnoremap <leader>sl :vsc Window.NewVerticalTabGroup<CR>
+
+" Extension: https://github.com/jagt/vs-NavigateTabGroups
+nnoremap <C-l> :vsc Tools.NavigateTabGroups.Right<CR>
+nnoremap <C-h> :vsc Tools.NavigateTabGroups.Left<CR>
+nnoremap <C-k> :vsc Tools.NavigateTabGroups.Up<CR>
+nnoremap <C-j> :vsc Tools.NavigateTabGroups.Down<CR>
+
+" Debug
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>bb :vsc Debug.ToggleBreakpoint<CR>
+
+" ReSharper
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>re :vsc ReSharper.ReSharper_Rename<CR>
+nnoremap <leader>ff :vsc ReSharper.ReSharper_GotoFile<CR>
+
+nnoremap <leader>fo :vsc ReSharper.ReSharper_ReformatCode<CR>
+nnoremap <leader>fd :vsc ReSharper.ReSharper_QuickDoc<CR>
+
+" Visual Assist
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NOTE: Should replace ReSharper with Visual Assist because its cheaper
