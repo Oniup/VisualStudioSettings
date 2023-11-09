@@ -25,7 +25,7 @@ nnoremap <leader>nh :noh<cr>
 nnoremap gd :vsc Edit.GoToDefinition<CR>
 nnoremap gl :vsc Edit.QuickInfo<CR>
 
-nnoremap <leader>re :vsc File.Rename<CR>
+nnoremap <leader>re :vsc Refactor.Rename<CR>
 nnoremap <leader>fo :vsc Edit.FormatDocument<CR>
 
 " No Copy
@@ -58,3 +58,5 @@ nnoremap <C-j> :vsc Tools.NavigateTabGroups.Down<CR>
 " Debug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>bb :vsc Debug.ToggleBreakpoint<CR>
+nnoremap <leader>bc :vsc Debug.DeleteAllBreakpoints<CR>
+nnoremap <leader>ba :vsc Debug.Breakpoints<CR>
