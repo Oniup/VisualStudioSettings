@@ -1,3 +1,7 @@
+" Extension List:
+" Comments: https://marketplace.visualstudio.com/items?itemName=TechHypno.ToggleComment
+" Navigation BTW Tab Groups https://github.com/jagt/vs-NavigateTabGroups
+
 let mapleader=" "
 let g:EasyMotion_leader_key='<leader>'
 
@@ -21,6 +25,9 @@ nnoremap <leader>nh :noh<cr>
 nnoremap gd :vsc Edit.GoToDefinition<CR>
 nnoremap gl :vsc Edit.QuickInfo<CR>
 
+nnoremap <leader>re :vsc File.Rename<CR>
+nnoremap <leader>fo :vsc Edit.FormatDocument<CR>
+
 " No Copy
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>d "_d
@@ -28,6 +35,10 @@ nnoremap <leader>c "_c
 
 vnoremap <leader>d "_d
 vnoremap <leader>c "_c
+
+" Comments
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+nnoremap gcc :vsc Edit.ToggleCommentDouble<CR>
 
 " Tab Navigation
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,7 +50,6 @@ nnoremap <S-h> :vsc Window.PreviousTab<CR>
 nnoremap <leader>sj :vsc Window.NewHorizontalTabGroup<CR>
 nnoremap <leader>sl :vsc Window.NewVerticalTabGroup<CR>
 
-" Extension: https://github.com/jagt/vs-NavigateTabGroups
 nnoremap <C-l> :vsc Tools.NavigateTabGroups.Right<CR>
 nnoremap <C-h> :vsc Tools.NavigateTabGroups.Left<CR>
 nnoremap <C-k> :vsc Tools.NavigateTabGroups.Up<CR>
@@ -48,15 +58,3 @@ nnoremap <C-j> :vsc Tools.NavigateTabGroups.Down<CR>
 " Debug
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <leader>bb :vsc Debug.ToggleBreakpoint<CR>
-
-" ReSharper
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-nnoremap <leader>re :vsc ReSharper.ReSharper_Rename<CR>
-nnoremap <leader>ff :vsc ReSharper.ReSharper_GotoFile<CR>
-
-nnoremap <leader>fo :vsc ReSharper.ReSharper_ReformatCode<CR>
-nnoremap <leader>fd :vsc ReSharper.ReSharper_QuickDoc<CR>
-
-" Visual Assist
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NOTE: Should replace ReSharper with Visual Assist because its cheaper
